@@ -11,9 +11,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <meta name="google-site-verification" content="iX9Z6iBtJfBQb95Ib0T5Y3nuQadeKdoCgnLRI1FvrDg" />
+    <meta
+      name="google-site-verification"
+      content="iX9Z6iBtJfBQb95Ib0T5Y3nuQadeKdoCgnLRI1FvrDg"
+    />
   </head>
-  <body> 
+  <body>
     <nav class="navbar navbar-expand-lg fixed-top" id="top-navbar">
       <div class="container">
         <a class="navbar-brand fs-5" href="index.html">Myanmar Ethnics</a>
@@ -28,7 +31,10 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
           <ul class="navbar-nav text-center">
             <li class="nav-item">
               <a class="nav-link fs-5" href="index.html">Home</a>
@@ -50,7 +56,9 @@
                 <li><a class="dropdown-item" href="chin.html">Chin</a></li>
                 <li><a class="dropdown-item" href="bamar.html">Bamar</a></li>
                 <li><a class="dropdown-item" href="mon.html">Mon</a></li>
-                <li><a class="dropdown-item" href="rakhine.html">Rakhine</a></li>
+                <li>
+                  <a class="dropdown-item" href="rakhine.html">Rakhine</a>
+                </li>
                 <li><a class="dropdown-item" href="shan.html">Shan</a></li>
               </ul>
             </li>
@@ -68,14 +76,20 @@
         >
           <h1 class="display-3">Myanmar</h1>
           <p class="lead">
-            Discover the rich tapestry of cultures, traditions, and people that make up the Union of
-            Myanmar. Our project explores the 8 major ethnic groups, highlighting their history,
-            customs, and heritage.
+            Discover the rich tapestry of cultures, traditions, and people that
+            make up the Union of Myanmar. Our project explores the 8 major
+            ethnic groups, highlighting their history, customs, and heritage.
           </p>
-          <a href="#about" class="btn btn-outline-primary btn-lg mb-3 align-self-lg-start"
+          <a
+            href="#about"
+            class="btn btn-outline-primary btn-lg mb-3 align-self-lg-start"
             >Learn More</a
           >
-          <div id="ethnicCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div
+            id="ethnicCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
             <div class="carousel-inner"></div>
 
             <button
@@ -105,9 +119,13 @@
     </header>
 
     <footer class="bg-dark text-white py-4 mt-auto">
-      <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div
+        class="container d-flex flex-wrap justify-content-between align-items-center"
+      >
         <div>
-          <a href="#" class="text-white text-decoration-none me-3">Myanmar Ethnics</a>
+          <a href="#" class="text-white text-decoration-none me-3"
+            >Myanmar Ethnics</a
+          >
           <span>© 2025 CyberSphere</span>
         </div>
         <div class="d-flex">
@@ -121,14 +139,46 @@
     <script src="script.js"></script>
     <script>
       const cardsData = [
-        { name: "Kachin", color: "bg-kachin" },
-        { name: "Kayar", color: "bg-kayar" },
-        { name: "Karen", color: "bg-karen" },
-        { name: "Chin", color: "bg-chin" },
-        { name: "Bamar", color: "bg-bamar" },
-        { name: "Mon", color: "bg-mon" },
-        { name: "Rakhine", color: "bg-rakhine" },
-        { name: "Shan", color: "bg-shan" },
+        {
+          name: "Kachin",
+          color: "bg-kachin",
+          img: "public/images/home_index/kachin.jpg",
+        },
+        {
+          name: "Kayah",
+          color: "bg-kayar",
+          img: "public/images/home_index/Kayah.JPG",
+        },
+        {
+          name: "Kayin",
+          color: "bg-karen",
+          img: "public/images/home_index/kayin.jpg",
+        },
+        {
+          name: "Chin",
+          color: "bg-chin",
+          img: "public/images/home_index/chin.jpg",
+        },
+        {
+          name: "Bamar",
+          color: "bg-bamar",
+          img: "public/images/home_index/bamar.jpg",
+        },
+        {
+          name: "Mon",
+          color: "bg-mon",
+          img: "public/images/home_index/mon.jpg",
+        },
+        {
+          name: "Rakhine",
+          color: "bg-rakhine",
+          img: "public/images/home_index/rakhine.jpg",
+        },
+        {
+          name: "Shan",
+          color: "bg-shan",
+          img: "public/images/home_index/shan.jpg",
+        },
       ];
 
       // determine cards per slide based on screen width
@@ -141,7 +191,9 @@
       }
 
       function buildCarousel() {
-        const container = document.querySelector("#ethnicCarousel .carousel-inner");
+        const container = document.querySelector(
+          "#ethnicCarousel .carousel-inner"
+        );
         container.innerHTML = "";
         const perSlide = getCardsPerSlide();
 
@@ -155,9 +207,15 @@
 
           slideCards.forEach((card) => {
             const cardEl = document.createElement("div");
-            cardEl.className = "card card-ethnic mx-1 flex-fill";
-            cardEl.innerHTML = `<div class="ethnic-color-box ${card.color}"></div>
-                          <div class="card-body py-1"><small>${card.name}</small></div>`;
+            cardEl.className = "card card-ethnic mx-1 flex-fill img-box";
+            cardEl.innerHTML = `
+  <div class="ethnic-color-box   overflow-hidden ${card.color}">
+    <img src="${card.img}" alt="${card.name}" class="idx-imgs" />
+  </div>
+  <div class="card-body py-1">
+    <small style="color: #006b53;">${card.name}</small>
+  </div>
+`;
             row.appendChild(cardEl);
           });
 
