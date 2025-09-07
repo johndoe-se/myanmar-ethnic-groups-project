@@ -1,0 +1,334 @@
+/* --- Material 3 Color System & Typography (Approximation) --- */
+:root {
+  /* Dynamic colors - these would be generated programmatically in a real M3 app */
+  --md-sys-color-primary: #006b53;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #82f8d0;
+  --md-sys-color-on-primary-container: #002117;
+  --md-sys-color-secondary: #4c635a;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #cee9dc;
+  --md-sys-color-on-secondary-container: #092018;
+  --md-sys-color-tertiary: #4c635a;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #cee9dc;
+  --md-sys-color-on-tertiary-container: #092018;
+  --md-sys-color-surface: #fbfdf9;
+  --md-sys-color-on-surface: #191c1b;
+  --md-sys-color-surface-variant: #dce5e0;
+  --md-sys-color-on-surface-variant: #404944;
+  --md-sys-color-outline: #707974;
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+
+  /* Additional colors for ethnic group boxes, chosen to complement M3 palette */
+  --color-kachin: #5d8e7e; /* Earthy Green-Blue */
+  --color-kayar: #a05c6d; /* Muted Rose */
+  --color-karen: #7e715d; /* Warm Grey-Brown */
+  --color-chin: #5c7b8e; /* Dusty Blue */
+  --color-bamar: #a08e5c; /* Golden Tan */
+  --color-mon: #8e5d7e; /* Soft Purple */
+  --color-rakhine: #5d8ea0; /* Light Teal */
+  --color-shan: #7e5d5d; /* Rusty Red */
+}
+
+/* Global Box Sizing for consistency */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* --- Global Styles --- */
+body {
+  font-family: "Noto Sans Myanmar", sans-serif;
+  color: var(--md-sys-color-on-surface);
+  background-color: var(--md-sys-color-surface);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand,
+.navbar-nav .nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+/* --- Navbar (M3 style) --- */
+#top-navbar {
+  background-color: transparent !important;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#top-navbar .nav-link,
+#top-navbar .navbar-brand {
+  color: var(--md-sys-color-on-primary) !important;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Optional: Adds readability */
+}
+
+.navbar-scrolled {
+  background-color: var(--md-sys-color-surface) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-brand {
+  color: var(--md-sys-color-on-surface) !important;
+  text-shadow: none;
+}
+
+.dropdown-menu {
+  background-color: var(--md-sys-color-surface);
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  color: var(--md-sys-color-on-surface) !important;
+}
+
+.dropdown-item:hover {
+  background-color: var(--md-sys-color-secondary-container);
+}
+
+/* --- Hero Section --- */
+.hero-bg {
+  background: linear-gradient(135deg, var(--md-sys-color-primary), var(--md-sys-color-secondary));
+  color: var(--md-sys-color-on-primary);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex; /* Makes the hero a flex container */
+  align-items: center; /* Vertically centers content within the hero section */
+}
+
+/* --- Map Positioning --- */
+/* The parent .col-lg-4 now handles all positioning to make it simple */
+.map-box {
+  /* No need for d-flex here, the parent column handles it */
+  height: 100vh;
+  padding-bottom: 3rem;
+  /* Removed padding from here as it's better on the parent element */
+}
+
+.map-box img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* --- Cards (M3 style) --- */
+.card {
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+  border: none;
+  border-radius: 1.5rem; /* More rounded corners for M3 */
+  box-shadow: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* M3-style elevation */
+}
+
+.card-ethnic .card-body small {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Ethnic Color Boxes */
+.ethnic-color-box {
+  height: 160px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: calc(1.5rem - 1px);
+  border-top-right-radius: calc(1.5rem - 1px);
+}
+
+/* Specific colors for each ethnic group */
+.bg-kachin {
+  background-color: var(--color-kachin);
+}
+.bg-kayar {
+  background-color: var(--color-kayar);
+}
+.bg-karen {
+  background-color: var(--color-karen);
+}
+.bg-chin {
+  background-color: var(--color-chin);
+}
+.bg-bamar {
+  background-color: var(--color-bamar);
+}
+.bg-mon {
+  background-color: var(--color-mon);
+}
+.bg-rakhine {
+  background-color: var(--color-rakhine);
+}
+.bg-shan {
+  background-color: var(--color-shan);
+}
+
+/* --- Buttons (M3 style) --- */
+.btn-outline-primary {
+  border-color: var(--md-sys-color-on-primary);
+  color: var(--md-sys-color-on-primary);
+  border-radius: 1.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--md-sys-color-on-primary);
+  color: var(--md-sys-color-primary);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--md-sys-color-surface-variant) !important;
+  color: var(--md-sys-color-on-surface-variant) !important;
+}
+
+footer a {
+  color: var(--md-sys-color-on-surface-variant) !important;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .hero-bg {
+    padding-top: 7rem;
+  }
+}
+
+
+      
+      .dropdown-menu {
+        background-color: var(--md-sys-color-surface);
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      .dropdown-item {
+        color: var(--md-sys-color-on-surface) !important;
+      }
+      
+      .dropdown-item:hover {
+        background-color: var(--md-sys-color-secondary-container);
+      }
+      
+      /* --- Hero Section --- */
+      .ethnic-hero {
+        background: linear-gradient(
+          135deg,
+          #5c7b8e,
+          #4c635a
+        );
+        color: var(--md-sys-color-on-primary);
+        min-height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .ethnic-hero h1 {
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      
+      /* --- Two-Column Layout --- */
+      .two-column-layout {
+        flex: 1; /* Take up remaining space */
+      }
+      .sidebar {
+        background-color: var(--md-sys-color-surface-variant);
+        padding: 2rem;
+        flex-shrink: 0;
+      }
+      .sidebar-title {
+        text-align: center;
+        border-bottom: 2px solid var(--md-sys-color-outline);
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+      }
+      .sidebar-list {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      .sidebar-list a {
+        display: block;
+        padding: 0.75rem 1rem;
+        text-decoration: none;
+        color: var(--md-sys-color-on-surface-variant);
+        font-weight: 500;
+        border-radius: 0.75rem;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+      .sidebar-list a:hover {
+        background-color: #d2e4d9;
+        color: var(--md-sys-color-on-secondary-container);
+      }
+      .sidebar-list a.active {
+        background-color: var(--md-sys-color-primary-container);
+        color: var(--md-sys-color-on-primary-container);
+      }
+      .main-content {
+        padding: 2rem;
+      }
+      
+      /* --- Content Sections --- */
+      .content-section {
+        padding: 4rem 0;
+      }
+      
+      .content-image-box {
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+      }
+      
+      .content-image-box img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      
+      /* --- Footer --- */
+      footer {
+        background-color: var(--md-sys-color-surface-variant) !important;
+        color: var(--md-sys-color-on-surface-variant) !important;
+      }
+      
+      footer a {
+        color: var(--md-sys-color-on-surface-variant) !important;
+      }
+      
+      /* --- Responsive Adjustments --- */
+      @media (max-width: 992px) {
+        .ethnic-hero {
+          padding-top: 7rem;
+        }
+      }
+      
+      /* Specific styles for sticky sidebar */
+      @media (min-width: 992px) {
+        .sidebar {
+          position: sticky;
+          top: 6rem; /* Account for the fixed navbar height */
+          height: calc(100vh - 6rem); /* Make it fill the viewport height */
+          overflow-y: auto; /* Allow scrolling if content is too long */
+        }
+      }

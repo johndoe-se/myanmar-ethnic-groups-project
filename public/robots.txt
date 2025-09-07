@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://myanmar-ethnic-groups.vercel.app/sitemap.xml

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Myanmar Ethnic Project</title>
+    <link rel="shortcut icon" href="myanmar.png" type="image/png" />
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="google-site-verification" content="iX9Z6iBtJfBQb95Ib0T5Y3nuQadeKdoCgnLRI1FvrDg" />
+  </head>
+  <body> 
+    <nav class="navbar navbar-expand-lg fixed-top" id="top-navbar">
+      <div class="container">
+        <a class="navbar-brand fs-5" href="index.html">Myanmar Ethnics</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle fs-5 active"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Ethnics
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="kachin.html">Kachin</a></li>
+                <li><a class="dropdown-item" href="kayar.html">Kayar</a></li>
+                <li><a class="dropdown-item" href="karen.html">Karen</a></li>
+                <li><a class="dropdown-item" href="chin.html">Chin</a></li>
+                <li><a class="dropdown-item" href="bamar.html">Bamar</a></li>
+                <li><a class="dropdown-item" href="mon.html">Mon</a></li>
+                <li><a class="dropdown-item" href="rakhine.html">Rakhine</a></li>
+                <li><a class="dropdown-item" href="shan.html">Shan</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="about.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header id="home" class="hero-bg d-flex align-items-center">
+      <div class="container d-flex flex-lg-row flex-column py-4">
+        <div
+          class="col-lg-8 d-flex flex-column justify-content-center text-center text-lg-start mb-4 mb-lg-0"
+        >
+          <h1 class="display-3">Myanmar</h1>
+          <p class="lead">
+            Discover the rich tapestry of cultures, traditions, and people that make up the Union of
+            Myanmar. Our project explores the 8 major ethnic groups, highlighting their history,
+            customs, and heritage.
+          </p>
+          <a href="#about" class="btn btn-outline-primary btn-lg mb-3 align-self-lg-start"
+            >Learn More</a
+          >
+          <div id="ethnicCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner"></div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#ethnicCarousel"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#ethnicCarousel"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-4 d-flex align-items-center justify-content-end">
+          <div class="map-box">
+            <img src="myanmarmap.png" alt="Myanmar Map" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <footer class="bg-dark text-white py-4 mt-auto">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <div>
+          <a href="#" class="text-white text-decoration-none me-3">Myanmar Ethnics</a>
+          <span>© 2025 CyberSphere</span>
+        </div>
+        <div class="d-flex">
+          <a href="#" class="text-white text-decoration-none me-3">Site Map</a>
+          <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+    <script>
+      const cardsData = [
+        { name: "Kachin", color: "bg-kachin" },
+        { name: "Kayar", color: "bg-kayar" },
+        { name: "Karen", color: "bg-karen" },
+        { name: "Chin", color: "bg-chin" },
+        { name: "Bamar", color: "bg-bamar" },
+        { name: "Mon", color: "bg-mon" },
+        { name: "Rakhine", color: "bg-rakhine" },
+        { name: "Shan", color: "bg-shan" },
+      ];
+
+      // determine cards per slide based on screen width
+      function getCardsPerSlide() {
+        const w = window.innerWidth;
+        if (w < 576) return 1;
+        if (w < 768) return 2;
+        if (w < 992) return 3;
+        return 4;
+      }
+
+      function buildCarousel() {
+        const container = document.querySelector("#ethnicCarousel .carousel-inner");
+        container.innerHTML = "";
+        const perSlide = getCardsPerSlide();
+
+        for (let i = 0; i < cardsData.length; i += perSlide) {
+          const slideCards = cardsData.slice(i, i + perSlide);
+          const slide = document.createElement("div");
+          slide.className = "carousel-item" + (i === 0 ? " active" : "");
+
+          const row = document.createElement("div");
+          row.className = "d-flex justify-content-center";
+
+          slideCards.forEach((card) => {
+            const cardEl = document.createElement("div");
+            cardEl.className = "card card-ethnic mx-1 flex-fill";
+            cardEl.innerHTML = `<div class="ethnic-color-box ${card.color}"></div>
+                          <div class="card-body py-1"><small>${card.name}</small></div>`;
+            row.appendChild(cardEl);
+          });
+
+          slide.appendChild(row);
+          container.appendChild(slide);
+        }
+      }
+
+      // build on load
+      buildCarousel();
+
+      // rebuild on resize for responsiveness
+      window.addEventListener("resize", () => {
+        buildCarousel();
+      });
+    </script>
+  </body>
+</html>
