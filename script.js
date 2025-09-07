@@ -1,4 +1,3 @@
-
 // Add a class to the navbar when the user scrolls down
 window.addEventListener("scroll", function () {
   const navbar = document.getElementById("top-navbar");
@@ -35,9 +34,14 @@ window.addEventListener("scroll", () => {
   let current = "";
 
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+    const rect = section.getBoundingClientRect();
+    const screenHeight = window.innerHeight;
+
+    const visibleHeight =
+      Math.min(rect.bottom, screenHeight) - Math.max(rect.top, 0);
+    const ratio = visibleHeight / screenHeight;
+
+    if (ratio >= 0.55) {
       current = section.getAttribute("id");
     }
   });
@@ -49,4 +53,3 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-
