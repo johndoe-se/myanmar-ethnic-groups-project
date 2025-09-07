@@ -6,7 +6,7 @@
     <title>Myanmar Ethnic Groups Project</title>
     <meta
       name="description"
-      content="Discover the 8 major ethnic groups of Myanmar: Kachin, Kayah, Karen, Chin, Bamar, Mon, Rakhine, and Shan. Explore their rich culture, traditions, and history."
+      content="Discover the 8 major ethnic groups of Myanmar: Kachin, Kayah, Kayin, Chin, Bamar, Mon, Rakhine, and Shan. Explore their rich culture, traditions, and history."
     />
     <link rel="shortcut icon" href="myanmar.png" type="image/png" />
     <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css" />
@@ -58,7 +58,7 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="kachin.html">Kachin</a></li>
                 <li><a class="dropdown-item" href="kayar.html">Kayah</a></li>
-                <li><a class="dropdown-item" href="karen.html">Karen</a></li>
+                <li><a class="dropdown-item" href="karen.html">Kayin</a></li>
                 <li><a class="dropdown-item" href="chin.html">Chin</a></li>
                 <li><a class="dropdown-item" href="bamar.html">Bamar</a></li>
                 <li><a class="dropdown-item" href="mon.html">Mon</a></li>
@@ -149,41 +149,49 @@
           name: "Kachin",
           color: "bg-kachin",
           img: "public/images/home_index/kachin.jpg",
+          href:"kachin.html",
         },
         {
           name: "Kayah",
           color: "bg-kayar",
           img: "public/images/home_index/Kayah.JPG",
+          href:"kayar.html",
         },
         {
           name: "Kayin",
           color: "bg-karen",
           img: "public/images/home_index/kayin.jpg",
+          href:"karen.html",
         },
         {
           name: "Chin",
           color: "bg-chin",
           img: "public/images/home_index/chin.jpg",
+          href:"chin.html",
         },
         {
           name: "Bamar",
           color: "bg-bamar",
           img: "public/images/home_index/bamar.jpg",
+          href:"bamar.html",
         },
         {
           name: "Mon",
           color: "bg-mon",
           img: "public/images/home_index/mon.jpg",
+          href:"mon.html",
         },
         {
           name: "Rakhine",
           color: "bg-rakhine",
           img: "public/images/home_index/rakhine.jpg",
+          href:"rakhine.html",
         },
         {
           name: "Shan",
           color: "bg-shan",
           img: "public/images/home_index/shan.jpg",
+          href:"shan.html",
         },
       ];
 
@@ -211,19 +219,22 @@
           const row = document.createElement("div");
           row.className = "d-flex justify-content-center";
 
-          slideCards.forEach((card) => {
-            const cardEl = document.createElement("div");
-            cardEl.className = "card card-ethnic mx-1 flex-fill img-box";
-            cardEl.innerHTML = `
-  <div class="ethnic-color-box   overflow-hidden ${card.color}">
-    <img src="${card.img}" alt="${card.name}" class="idx-imgs" />
-  </div>
-  <div class="card-body py-1">
-    <small style="color: #006b53;">${card.name}</small>
-  </div>
-`;
-            row.appendChild(cardEl);
-          });
+         slideCards.forEach((card) => {
+  const cardEl = document.createElement("a");
+  cardEl.className = "card card-ethnic mx-1 flex-fill img-box";
+  cardEl.href = card.href;
+  cardEl.style.textDecoration = "none"; // remove underline
+  cardEl.innerHTML = `
+    <div class="ethnic-color-box overflow-hidden ${card.color}">
+      <img src="${card.img}" alt="${card.name}" class="idx-imgs" />
+    </div>
+    <div class="card-body py-1">
+      <small style="color: #006b53;">${card.name}</small>
+    </div>
+  `;
+  row.appendChild(cardEl);
+});
+
 
           slide.appendChild(row);
           container.appendChild(slide);
