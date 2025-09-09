@@ -336,3 +336,22 @@ footer a {
     overflow-y: auto; /* Allow scrolling if content is too long */
   }
 }
+
+.offcanvas {
+  height: 100vh !important;
+  background-color: #0b433a;
+  color: white;
+}
+
+.arrow {
+  color: white;
+  transition: transform 0.3s;
+}
+
+a[data-bs-toggle="collapse"].collapsed .arrow {
+  transform: rotate(0deg);
+}
+
+a[data-bs-toggle="collapse"]:not(.collapsed) .arrow {
+  transform: rotate(180deg);
+}

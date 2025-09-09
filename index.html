@@ -8,8 +8,13 @@
       name="description"
       content="Discover the 8 major ethnic groups of Myanmar: Kachin, Kayah, Kayin, Chin, Bamar, Mon, Rakhine, and Shan. Explore their rich culture, traditions, and history."
     />
+
     <link rel="shortcut icon" href="myanmar.png" type="image/png" />
     <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;500&display=swap"
       rel="stylesheet"
@@ -21,33 +26,30 @@
       content="iX9Z6iBtJfBQb95Ib0T5Y3nuQadeKdoCgnLRI1FvrDg"
     />
   </head>
+
   <body>
-  <body>
-    <nav class="navbar navbar-expand-lg fixed-top" id="top-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="top-navbar">
       <div class="container">
         <a class="navbar-brand fs-5" href="index.html">Myanmar Ethnics</a>
+
         <button
-          class="navbar-toggler"
+          class="navbar-toggler d-lg-none"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNav"
+          aria-controls="offcanvasNav"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav text-center">
+
+        <div class="d-none d-lg-flex ms-auto">
+          <ul class="navbar-nav flex-row gap-5">
             <li class="nav-item">
               <a class="nav-link fs-5" href="index.html">Home</a>
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle fs-5 active"
+                class="nav-link fs-5 dropdown-toggle"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -75,6 +77,81 @@
         </div>
       </div>
     </nav>
+
+    <div
+      class="offcanvas offcanvas-end d-lg-none"
+      tabindex="-1"
+      id="offcanvasNav"
+      aria-labelledby="offcanvasNavLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavLabel"></h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-4"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="index.html">Home</a>
+          </li>
+          <li class="nav-item text-center">
+            <a
+              class="nav-link fs-5 d-flex justify-content-center align-items-center gap-1 collapsed"
+              href="#ethnicsSubmenu"
+              data-bs-toggle="collapse"
+            >
+              Ethnics
+              <span class="arrow bi bi-chevron-down"></span>
+            </a>
+            <div class="collapse" id="ethnicsSubmenu">
+              <ul class="list-unstyled ps-3 mt-2">
+                <li>
+                  <a class="nav-link fs-6 text-center" href="kachin.html"
+                    >Kachin</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link fs-6 text-center" href="kayar.html"
+                    >Kayah</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link fs-6 text-center" href="karen.html"
+                    >Kayin</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link fs-6 text-center" href="chin.html">Chin</a>
+                </li>
+                <li>
+                  <a class="nav-link fs-6 text-center" href="bamar.html"
+                    >Bamar</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link fs-6 text-center" href="mon.html">Mon</a>
+                </li>
+                <li>
+                  <a class="nav-link fs-6 text-center" href="rakhine.html"
+                    >Rakhine</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link fs-6 text-center" href="shan.html">Shan</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <header id="home" class="hero-bg d-flex align-items-center">
       <div class="container d-flex flex-lg-row flex-column index-sec">
         <div
@@ -93,7 +170,7 @@
           >
           <div
             id="ethnicCarousel"
-            class="carousel slide "
+            class="carousel slide"
             data-bs-ride="carousel"
           >
             <div class="carousel-inner carousel-padding"></div>
@@ -116,7 +193,9 @@
             </button>
           </div>
         </div>
-        <div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end"">
+        <div
+          class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end"
+        >
           <div class="map-box">
             <img src="myanmarmap.png" alt="Myanmar Map" class="img-fluid" />
           </div>
@@ -135,7 +214,9 @@
           <span>© 2025 CyberSphere</span>
         </div>
         <div class="d-flex">
-         <a href="sitemap.xml" class="text-white text-decoration-none">Site Map</a>
+          <a href="sitemap.xml" class="text-white text-decoration-none"
+            >Site Map</a
+          >
         </div>
       </div>
     </footer>
@@ -148,49 +229,49 @@
           name: "Kachin",
           color: "bg-kachin",
           img: "public/images/home_index/kachin.jpg",
-          href:"kachin.html",
+          href: "kachin.html",
         },
         {
           name: "Kayah",
           color: "bg-kayar",
           img: "public/images/home_index/Kayah.JPG",
-          href:"kayar.html",
+          href: "kayar.html",
         },
         {
           name: "Kayin",
           color: "bg-karen",
           img: "public/images/home_index/kayin.jpg",
-          href:"karen.html",
+          href: "karen.html",
         },
         {
           name: "Chin",
           color: "bg-chin",
           img: "public/images/home_index/chin.jpg",
-          href:"chin.html",
+          href: "chin.html",
         },
         {
           name: "Bamar",
           color: "bg-bamar",
           img: "public/images/home_index/bamar.jpg",
-          href:"bamar.html",
+          href: "bamar.html",
         },
         {
           name: "Mon",
           color: "bg-mon",
           img: "public/images/home_index/mon.jpg",
-          href:"mon.html",
+          href: "mon.html",
         },
         {
           name: "Rakhine",
           color: "bg-rakhine",
           img: "public/images/home_index/rakhine.jpg",
-          href:"rakhine.html",
+          href: "rakhine.html",
         },
         {
           name: "Shan",
           color: "bg-shan",
           img: "public/images/home_index/shan.jpg",
-          href:"shan.html",
+          href: "shan.html",
         },
       ];
 
@@ -218,12 +299,12 @@
           const row = document.createElement("div");
           row.className = "d-flex justify-content-center";
 
-         slideCards.forEach((card) => {
-  const cardEl = document.createElement("a");
-  cardEl.className = "card card-ethnic mx-1 flex-fill img-box";
-  cardEl.href = card.href;
-  cardEl.style.textDecoration = "none"; // remove underline
-  cardEl.innerHTML = `
+          slideCards.forEach((card) => {
+            const cardEl = document.createElement("a");
+            cardEl.className = "card card-ethnic mx-1 flex-fill img-box";
+            cardEl.href = card.href;
+            cardEl.style.textDecoration = "none"; // remove underline
+            cardEl.innerHTML = `
     <div class="ethnic-color-box overflow-hidden ${card.color}">
       <img src="${card.img}" alt="${card.name}" class="idx-imgs" />
     </div>
@@ -231,9 +312,8 @@
       <small style="color: #006b53;">${card.name}</small>
     </div>
   `;
-  row.appendChild(cardEl);
-});
-
+            row.appendChild(cardEl);
+          });
 
           slide.appendChild(row);
           container.appendChild(slide);
