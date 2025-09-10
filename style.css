@@ -355,3 +355,16 @@ a[data-bs-toggle="collapse"].collapsed .arrow {
 a[data-bs-toggle="collapse"]:not(.collapsed) .arrow {
   transform: rotate(180deg);
 }
+
+.ethnic-a {
+  font-size: 12px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0.25rem 0.5rem;
+}
