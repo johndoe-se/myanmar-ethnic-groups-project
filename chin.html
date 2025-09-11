@@ -11,33 +11,35 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/vic_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg fixed-top" id="top-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="top-navbar">
       <div class="container">
         <a class="navbar-brand fs-5" href="index.html">Myanmar Ethnics</a>
+
         <button
-          class="navbar-toggler"
+          class="navbar-toggler d-lg-none"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNav"
+          aria-controls="offcanvasNav"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav text-center">
+
+        <div class="d-none d-lg-flex ms-auto">
+          <ul class="navbar-nav flex-row gap-5">
             <li class="nav-item">
-              <a class="nav-link fs-5" href="index.html">Home</a>
+              <a class="nav-link fs-6" href="index.html">Home</a>
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle fs-5 active"
+                class="nav-link fs-6 dropdown-toggle"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -46,8 +48,12 @@
                 Ethnics
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="kachin.html">Kachin</a></li>
-                <li><a class="dropdown-item" href="kayar.html">Kayah</a></li>
+                <li>
+                  <a class="dropdown-item" href="kachin.html">Kachin</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="kayar.html">Kayah</a>
+                </li>
                 <li><a class="dropdown-item" href="karen.html">Kayin</a></li>
                 <li>
                   <a class="dropdown-item active" href="chin.html">Chin</a>
@@ -61,12 +67,98 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5" href="about.html">About</a>
+              <a class="nav-link fs-6" href="about.html">About</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <div
+      class="offcanvas offcanvas-end d-lg-none"
+      tabindex="-1"
+      id="offcanvasNav"
+      aria-labelledby="offcanvasNavLabel"
+    >
+      <div class="offcanvas-header">
+        <h5
+          class="offcanvas-title"
+          style="margin-left: 1.5rem"
+          id="offcanvasNavLabel"
+        >
+          Menu
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-4"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item">
+            <a class="nav-link fs-6" href="index.html">Home</a>
+          </li>
+          <li class="nav-item text-center">
+            <a
+              class="nav-link fs-6 d-flex justify-content-center align-items-center gap-1 collapsed"
+              href="#ethnicsSubmenu"
+              data-bs-toggle="collapse"
+            >
+              Ethnics
+              <span class="arrow bi bi-chevron-down"></span>
+            </a>
+            <div class="collapse" id="ethnicsSubmenu">
+              <ul class="list-unstyled">
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="kachin.html"
+                    >Kachin</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="kayar.html"
+                    >Kayah</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="karen.html"
+                    >Kayin</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="chin.html"
+                    >Chin</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="bamar.html"
+                    >Bamar</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="mon.html"
+                    >Mon</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="rakhine.html"
+                    >Rakhine</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="shan.html"
+                    >Shan</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <header class="ethnic-hero d-flex align-items-center">
       <div class="container text-center">
@@ -179,7 +271,9 @@
           <span>© 2025 CyberSphere</span>
         </div>
         <div class="d-flex">
-         <a href="sitemap.xml" class="text-white text-decoration-none">Site Map</a>
+          <a href="sitemap.xml" class="text-white text-decoration-none"
+            >Site Map</a
+          >
         </div>
       </div>
     </footer>

@@ -336,3 +336,46 @@ footer a {
     overflow-y: auto; /* Allow scrolling if content is too long */
   }
 }
+
+.offcanvas {
+  height: 100vh !important;
+  background-color: #0b433a;
+  color: white;
+}
+
+.arrow {
+  color: white;
+  transition: transform 0.3s;
+}
+
+a[data-bs-toggle="collapse"].collapsed .arrow {
+  transform: rotate(0deg);
+}
+
+a[data-bs-toggle="collapse"]:not(.collapsed) .arrow {
+  transform: rotate(180deg);
+}
+
+.ethnic-a {
+  font-size: 12px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0.25rem 0.5rem;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #0b433a !important;
+  color: #fff !important;
+}
+
+.dropdown-item:hover {
+  background-color: #145c52 !important;
+  color: #fff !important;
+}

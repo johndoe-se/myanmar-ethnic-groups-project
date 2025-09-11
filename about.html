@@ -16,30 +16,34 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style/vic_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg fixed-top" id="top-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="top-navbar">
       <div class="container">
         <a class="navbar-brand fs-5" href="index.html">Myanmar Ethnics</a>
+
         <button
-          class="navbar-toggler"
+          class="navbar-toggler d-lg-none"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNav"
+          aria-controls="offcanvasNav"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <ul class="navbar-nav text-center">
+
+        <div class="d-none d-lg-flex ms-auto">
+          <ul class="navbar-nav flex-row gap-5">
             <li class="nav-item">
-              <a class="nav-link fs-5" href="index.html">Home</a>
+              <a class="nav-link fs-6" href="index.html">Home</a>
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle fs-5"
+                class="nav-link fs-6 dropdown-toggle"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -49,8 +53,8 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="kachin.html">Kachin</a></li>
-                <li><a class="dropdown-item" href="kayar.html">Kayar</a></li>
-                <li><a class="dropdown-item" href="karen.html">Karen</a></li>
+                <li><a class="dropdown-item" href="kayar.html">Kayah</a></li>
+                <li><a class="dropdown-item" href="karen.html">Kayin</a></li>
                 <li><a class="dropdown-item" href="chin.html">Chin</a></li>
                 <li><a class="dropdown-item" href="bamar.html">Bamar</a></li>
                 <li><a class="dropdown-item" href="mon.html">Mon</a></li>
@@ -61,20 +65,107 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 active" href="about.html">About</a>
+              <a class="nav-link fs-6" href="about.html">About</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
+    <div
+      class="offcanvas offcanvas-end d-lg-none"
+      tabindex="-1"
+      id="offcanvasNav"
+      aria-labelledby="offcanvasNavLabel"
+    >
+      <div class="offcanvas-header">
+        <h5
+          class="offcanvas-title"
+          style="margin-left: 1.5rem"
+          id="offcanvasNavLabel"
+        >
+          Menu
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white me-4"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item">
+            <a class="nav-link fs-6" href="index.html">Home</a>
+          </li>
+          <li class="nav-item text-center">
+            <a
+              class="nav-link fs-6 d-flex justify-content-center align-items-center gap-1 collapsed"
+              href="#ethnicsSubmenu"
+              data-bs-toggle="collapse"
+            >
+              Ethnics
+              <span class="arrow bi bi-chevron-down"></span>
+            </a>
+            <div class="collapse" id="ethnicsSubmenu">
+              <ul class="list-unstyled">
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="kachin.html"
+                    >Kachin</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="kayar.html"
+                    >Kayah</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="karen.html"
+                    >Kayin</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="chin.html"
+                    >Chin</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="bamar.html"
+                    >Bamar</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="mon.html"
+                    >Mon</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="rakhine.html"
+                    >Rakhine</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-link text-center ethnic-a" href="shan.html"
+                    >Shan</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <header class="hero-bg d-flex align-items-center">
       <div class="container text-center">
         <h1 class="display-3">About Us</h1>
         <p class="lead col-lg-8 mx-auto">
-          Our project is dedicated to sharing the rich history and vibrant cultures of Myanmar's
-          eight major ethnic groups. We believe in celebrating diversity and fostering a deeper
-          understanding of the people who make up this beautiful nation.
+          Our project is dedicated to sharing the rich history and vibrant
+          cultures of Myanmar's eight major ethnic groups. We believe in
+          celebrating diversity and fostering a deeper understanding of the
+          people who make up this beautiful nation.
         </p>
       </div>
     </header>
@@ -85,28 +176,32 @@
           <div class="col-lg-6 mb-4 mb-lg-0">
             <h2 class="h3 mb-3">Our Mission</h2>
             <p>
-              The Myanmar Ethnics Project was created by CyberSphere as a digital tribute to the
-              eight main ethnic groups of Myanmar. Our mission is to serve as a
-              <strong>comprehensive, educational resource</strong> that goes beyond basic facts. We
-              aim to meticulously research and respectfully showcase the rich tapestry of
-              cultures—including the Kachin, Kayah, Karen, Chin, Bamar, Mon, Rakhine, and Shan
-              peoples. Through this platform, we hope to preserve and celebrate their unique
-              traditions, histories, languages, and arts for a global audience, fostering a deeper
-              appreciation for their heritage.
+              The Myanmar Ethnics Project was created by CyberSphere as a
+              digital tribute to the eight main ethnic groups of Myanmar. Our
+              mission is to serve as a
+              <strong>comprehensive, educational resource</strong> that goes
+              beyond basic facts. We aim to meticulously research and
+              respectfully showcase the rich tapestry of cultures—including the
+              Kachin, Kayah, Karen, Chin, Bamar, Mon, Rakhine, and Shan peoples.
+              Through this platform, we hope to preserve and celebrate their
+              unique traditions, histories, languages, and arts for a global
+              audience, fostering a deeper appreciation for their heritage.
             </p>
           </div>
           <div class="col-lg-6">
             <h2 class="h3 mb-3">Our Vision</h2>
             <p>
-              Our vision is to see the rich and intricate cultural tapestry of Myanmar not just
-              recognized, but actively <strong>celebrated and understood</strong> worldwide. We
-              aspire to make this project a living, evolving platform—a tribute to the resilience,
-              creativity, and vibrancy of the people of Myanmar. We believe that by sharing these
-              stories and fostering an environment of learning, we can inspire meaningful dialogue
-              and help bridge cultural gaps. We are committed to continuously expanding our content
-              and, in the future, we hope to incorporate contributions from community members
-              themselves, turning this project into a truly collaborative space for cultural
-              preservation and education.
+              Our vision is to see the rich and intricate cultural tapestry of
+              Myanmar not just recognized, but actively
+              <strong>celebrated and understood</strong> worldwide. We aspire to
+              make this project a living, evolving platform—a tribute to the
+              resilience, creativity, and vibrancy of the people of Myanmar. We
+              believe that by sharing these stories and fostering an environment
+              of learning, we can inspire meaningful dialogue and help bridge
+              cultural gaps. We are committed to continuously expanding our
+              content and, in the future, we hope to incorporate contributions
+              from community members themselves, turning this project into a
+              truly collaborative space for cultural preservation and education.
             </p>
           </div>
         </div>
@@ -137,7 +232,9 @@
             <div class="card h-100 shadow-sm">
               <div class="card-body text-center">
                 <h5 class="card-title">Maya Sharma</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Content Researcher</h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Content Researcher
+                </h6>
                 <p class="card-text text-secondary">ID: researcher-1</p>
               </div>
             </div>
@@ -146,7 +243,9 @@
             <div class="card h-100 shadow-sm">
               <div class="card-body text-center">
                 <h5 class="card-title">David Kim</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Content Researcher</h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Content Researcher
+                </h6>
                 <p class="card-text text-secondary">ID: researcher-2</p>
               </div>
             </div>
@@ -155,7 +254,9 @@
             <div class="card h-100 shadow-sm">
               <div class="card-body text-center">
                 <h5 class="card-title">Isabella Rossi</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Content Researcher</h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Content Researcher
+                </h6>
                 <p class="card-text text-secondary">ID: researcher-3</p>
               </div>
             </div>
@@ -164,7 +265,9 @@
             <div class="card h-100 shadow-sm">
               <div class="card-body text-center">
                 <h5 class="card-title">Tom Adams</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Content Researcher</h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Content Researcher
+                </h6>
                 <p class="card-text text-secondary">ID: researcher-4</p>
               </div>
             </div>
@@ -173,7 +276,9 @@
             <div class="card h-100 shadow-sm">
               <div class="card-body text-center">
                 <h5 class="card-title">Sarah Miller</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Content Researcher</h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Content Researcher
+                </h6>
                 <p class="card-text text-secondary">ID: researcher-5</p>
               </div>
             </div>
@@ -182,7 +287,9 @@
             <div class="card h-100 shadow-sm">
               <div class="card-body text-center">
                 <h5 class="card-title">Ethan Brown</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Content Researcher</h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Content Researcher
+                </h6>
                 <p class="card-text text-secondary">ID: researcher-6</p>
               </div>
             </div>
@@ -191,7 +298,9 @@
             <div class="card h-100 shadow-sm">
               <div class="card-body text-center">
                 <h5 class="card-title">Olivia Davis</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Content Researcher</h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Content Researcher
+                </h6>
                 <p class="card-text text-secondary">ID: researcher-7</p>
               </div>
             </div>
@@ -200,7 +309,9 @@
             <div class="card h-100 shadow-sm">
               <div class="card-body text-center">
                 <h5 class="card-title">Noah Wilson</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Content Researcher</h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Content Researcher
+                </h6>
                 <p class="card-text text-secondary">ID: researcher-8</p>
               </div>
             </div>
@@ -210,13 +321,19 @@
     </main>
 
     <footer class="bg-dark text-white py-4 mt-auto">
-      <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <div
+        class="container d-flex flex-wrap justify-content-between align-items-center"
+      >
         <div>
-          <a href="#" class="text-white text-decoration-none me-3">Myanmar Ethnics</a>
+          <a href="#" class="text-white text-decoration-none me-3"
+            >Myanmar Ethnics</a
+          >
           <span>© 2025 CyberSphere</span>
         </div>
         <div class="d-flex">
-         <a href="sitemap.xml" class="text-white text-decoration-none">Site Map</a>
+          <a href="sitemap.xml" class="text-white text-decoration-none"
+            >Site Map</a
+          >
         </div>
       </div>
     </footer>
