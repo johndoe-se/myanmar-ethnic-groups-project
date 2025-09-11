@@ -3,70 +3,64 @@
 
   <url>
     <loc>https://myanmar-ethnic-groups.netlify.app/</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://myanmar-ethnic-groups.netlify.app/about</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Ethnic group pages -->
   <url>
     <loc>https://myanmar-ethnic-groups.netlify.app/kachin</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://myanmar-ethnic-groups.netlify.app/kayar</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://myanmar-ethnic-groups.netlify.app/karen</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://myanmar-ethnic-groups.netlify.app/shan</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://myanmar-ethnic-groups.netlify.app/mon</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://myanmar-ethnic-groups.netlify.app/chin</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://myanmar-ethnic-groups.netlify.app/rakhine</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://myanmar-ethnic-groups.netlify.app/bamar</loc>
-    <lastmod>2025-09-06</lastmod>
+    <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
