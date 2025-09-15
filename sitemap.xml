@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://myanmar-ethnic-groups.netlify.app/</loc>
+    <loc>https://myanmar-ethnic-groups.pages.dev/</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://myanmar-ethnic-groups.netlify.app/about</loc>
+    <loc>https://myanmar-ethnic-groups.pages.dev/about</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -17,49 +17,49 @@
 
   <!-- Ethnic group pages -->
   <url>
-    <loc>https://myanmar-ethnic-groups.netlify.app/kachin</loc>
+    <loc>https://myanmar-ethnic-groups.pages.dev/kachin</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myanmar-ethnic-groups.netlify.app/kayar</loc>
+    <loc>https://myanmar-ethnic-groups.pages.dev/kayar</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myanmar-ethnic-groups.netlify.app/karen</loc>
+    <loc>https://myanmar-ethnic-groups.pages.dev/karen</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myanmar-ethnic-groups.netlify.app/shan</loc>
+    <loc>https://myanmar-ethnic-groups.pages.dev/shan</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myanmar-ethnic-groups.netlify.app/mon</loc>
+    <loc>https://myanmar-ethnic-groups.pages.dev/mon</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myanmar-ethnic-groups.netlify.app/chin</loc>
+    <loc>https://myanmar-ethnic-groups.pages.dev/chin</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myanmar-ethnic-groups.netlify.app/rakhine</loc>
+    <loc>https://myanmar-ethnic-groups.pages.dev/rakhine</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://myanmar-ethnic-groups.netlify.app/bamar</loc>
+    <loc>https://myanmar-ethnic-groups.pages.dev/bamar</loc>
     <lastmod>2025-09-06T00:00:00+00:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
