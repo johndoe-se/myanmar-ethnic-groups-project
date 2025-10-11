@@ -331,8 +331,8 @@ footer a {
 @media (min-width: 992px) {
   .sidebar {
     position: sticky;
-    top: 3.8rem; /* Account for the fixed navbar height */
-    height: calc(100vh - 3.8rem); /* Make it fill the viewport height */
+    top: 3.5rem; /* Account for the fixed navbar height */
+    height: calc(100vh - 3.5rem); /* Make it fill the viewport height */
     overflow-y: auto; /* Allow scrolling if content is too long */
   }
 }
