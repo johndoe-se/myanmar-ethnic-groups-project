@@ -15,10 +15,22 @@
   padding: 12px 16px !important;
 }
 
-.detail-image {
-  aspect-ratio: 16 / 9;
+.con-vid {
+  aspect-ratio: 16 / 10;
+  display: flex;
+  justify-items: center;
+}
+
+.con-vid video {
   object-fit: cover;
-  opacity: 0.9;
+  object-position: c;
+  height: auto;
+}
+
+.detail-image {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  filter: brightness(90%);
 }
 
 .idx-imgs {
